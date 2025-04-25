@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Budz - Study Smarter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Budz</h2>
+      <nav class="nav">
+        <label for="tab1">Home</label>
+        <label for="tab2">Messages</label>
+        <label for="tab3">Notifications</label>
+        <label for="tab4">Feedback</label>
+        <label for="tab5">Profile</label>
+        <label for="tab6">Bookings</label>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search Something...">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <br>
+      <hr>
+
+      <!-- Tabs Content -->
+      <div class="sidebar-tab">
+        <!-- Hidden Radio Buttons -->
+        <input type="radio" id="tab1" name="tab-group" checked>
+        <input type="radio" id="tab2" name="tab-group">
+        <input type="radio" id="tab3" name="tab-group">
+        <input type="radio" id="tab4" name="tab-group">
+        <input type="radio" id="tab5" name="tab-group">
+        <input type="radio" id="tab6" name="tab-group">
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="content1">
+          <h1>Welcome to Budz!</h1>
+          <p>Good luck!</p>
+
+          <div class="tab-container">
+            <button class="tab-button" id="feedback">Submit Feedback</button>
+            <button class="tab-button" id="modules">Modules</button>
+            <button class="tab-button" id="profile">Profile</button>
+          </div>
+
+          <div class="homepage">
+            <div class="stats-box">
+              <h3>Here are your current stats:</h3>
+              <hr> 
+              <div class="stats">
+                <p>Pairings: 5</p>
+                <p>Study Groups: 3</p>
+                <p>Assignments Due: 4</p>
+                <p>Upcoming Bookings: 2</p>
+                <p>cGPA: 4.0</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pairings">
+            <div class="pairing-box">
+              <h3>Current Pairings</h3>
+              <hr>
+              <div class="pairings">
+                <p class="pairing-item">Pairing 1: GENG YUE (2403880d@student.tp.edu.sg) <button class="unpair-button">Unpair</button></p>
+                <p class="pairing-item">Pairing 2: ASIFF YUSRA MUFEEDA (2403987G@student.tp.edu.sg) <button class="unpair-button">Unpair</button></p>
+                <p class="pairing-item">Pairing 3: ZHANG YU (2474597G@student.tp.edu.sg) <button class="unpair-button">Unpair</button></p>
+                <p class="pairing-item">Pairing 4: KAREN CHAN XINYI (2403187D@student.tp.edu.sg) <button class="unpair-button">Unpair</button></p>
+                <p class="pairing-item">Pairing 5: SYARIFAH NUR RAUDHAH BINTE MUHAMMAD RHAZALI (2401778B@student.tp.edu.sg) <button class="unpair-button">Unpair</button></p>
+              </div>
+        </div>
+
+          <div class="study_groups">
+            <div class="group-box">
+              <h3>Current Study Groups</h3>
+              <hr>
+              <div class="groups">
+                <ul>
+                  <li>COMT Study Group [Current Member Count: 4/5]</li>
+                  <li>ADEV + BDAV Study Group [Current Member Count: 5]</li>
+                  <li>NECT Study Group [Current Member Count: 3/5]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="tab-content" id="content2">
+          <h2>Messages</h2>
+          <div class="tab-container">
+              <div class="message">
+                  <h4>From: Alex Johnson (C24B02)</h4>
+                  <p>Hey, just wanted to check in on the group project. Let me know if you need help!</p>
+                  <p class="timestamp">Sent: 2024-11-22 7:35 PM</p>
+              </div>
+  
+              <div class="message">
+                  <h4>From: Booking Bot</h4>
+                  <p>Reminder: Your next meeting is scheduled for tomorrow at 2 PM in the library.</p>
+                  <p class="timestamp">Sent: 2024-11-22 1:40 PM</p>
+              </div>
+  
+              <div class="message">
+                  <h4>From: Jane Doe (C24B03)</h4>
+                  <p>Hi! Are you still looking for a study group?</p>
+                  <p class="timestamp">Sent: 2024-11-21 11:59 PM</p>
+              </div>
+
+              <div class="message">
+                <h4>From: 4.0 GPA (Group)</h4>
+                <p>Jennie: Should we study at IT 03-06-57?</p>
+                <p class="timestamp" > Sent: 2024-11-21 3:00 PM</p>
+              </div>
+
+              <div class="message">
+                <h4>To: Sofia (C24B024)</h4>
+                <p>Wanna study in the Library today?</p>
+                <p class="timestamp" > Sent: 2024-11-21 5:20 AM</p>
+              </div>
+        </div>
+      </div>
+
+        <div class="tab-content" id="content3">
+          <h2>Your Notifications</h2>
+          <div class="tab-container">
+            <div class="notifications">
+              <h4>From: CIT1C21 Application Development Project</h4>
+              <p>Attention: Your Assignment [Daniella Han - Case Study] was successfully submitted.</p>
+              <p class="timestamp">Sent: 2024-12-03 9:45 PM</p>
+          </div>
+    
+          <div class="notifications">
+            <h4>From: GTP1101 Leadership Fundamentals (LEADFUN) (IIT)</h4>
+            <p>Attention: Your Assignment [Project 1] is due today at 2359.</p>
+            <p class="timestamp">Sent: 2024-12-02 8:30 PM</p>
+          </div>
+    
+        <div class="notifications">
+          <h4>From: CIT1C21 Application Development Project</h4>
+          <p>Attention: Your Assignment [Project 1] is due today at 2359.</p>
+          <p class="timestamp">Sent: 2024-12-01 7:15 PM</p>
+        </div>
+    
+      <div class="notifications">
+        <h4>From: CCF1C04 Network and Cloud Technology</h4>
+        <p>Attention: Teaching Schedule has been uploaded.</p>
+        <p class="timestamp">Sent: 2024-11-30 6:00 PM</p>
+      </div>
+    
+      <div class="notifications">
+        <h4>From: Budz Admin</h4>
+        <p>Attention: You have been added into Study Group "4.0 GPA".</p>
+        <p class="timestamp">Sent: 2024-11-29 4:45 PM</p>
+      </div>
+   </div>
+</div>
+
+      <div class="tab-content" id="content4">
+        <div class="feedback-container">
+          <h3>Submit Feedback</h3>
+          <form action="/submit" method="POST">
+            <div class="form-row">
+              <label for="Type">Feedback Type:</label>
+              <select name="Type" id="Type" required>
+                <option value="" disabled selected>Select Feedback Type</option>
+                <option value="bug">Bug</option>
+                <option value="feature">Review (Student)</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="feedback">Feedback:</label>
+              <textarea name="feedback" id="feedback" cols="60" rows="8" placeholder="Enter your feedback here" required></textarea>
+            </div>
+            <p><em>*If regarding a student, please include their name and admin number in the feedback.</em></p>
+            <div class="form-row">
+              <label for="email">Your School Email:</label>
+              <input type="email" name="email" id="email" placeholder="23001822J@student.tp.edu.sg" required>
+            </div>
+            <label>Would you like to be updated on your feedback?</label>
+            <br>
+            <label for="yes">Yes</label>
+            <input type="radio" name="update" id="yes" value="yes" required>
+            <label for="no">No</label>
+            <input type="radio" name="update" id="no" value="no" required>
+            <hr>
+            <button type="submit">Submit Feedback</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="tab-content" id="content5">
+        <div class="profile-header">
+            <div class="profile-picture">
+                <img src="user.png" alt="Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h2 class="profile-name">Your Name</h2>
+                <p class="profile-qualification">Diploma in Information Technology</p>
+            </div>
+          <div class="compatibility">
+            <p>Compatibility: 95%</p>
+          </div>
+          <button class="edit-profile">Edit Profile</button> <!-- Edit button in the header -->
+        </div>
+    
+        <!-- Profile Stats Section -->
+        <div class="profile-stats">
+            <h3>Your Stats:</h3>
+            <hr>
+            <div class="stats">
+                <p>Pairings: 5</p>
+                <p>Study Groups: 3</p>
+                <p>Assignments Due: 4</p>
+                <p>Upcoming Bookings: 2</p>
+                <p>cGPA: 4.0</p>
+            </div>
+        </div>
+    
+        <!-- Strengths and Weaknesses Section -->
+        <div class="profile-section">
+            <h2>Strengths and Weaknesses</h2>
+            <table>
+                <tr>
+                    <th>Strengths</th>
+                    <th>Weaknesses</th>
+                </tr>
+                <tr>
+                    <td>Problem Solving</td>
+                    <td>Time Management</td>
+                </tr>
+                <tr>
+                    <td>Team Collaboration</td>
+                    <td>Stress Management</td>
+                </tr>
+            </table>
+        </div>
+    
+        <!-- Interests Section -->
+        <div class="profile-section">
+            <h2>Interests</h2>
+            <p>UXID, COMT, LOMA, ADEV, DBAV, NECT, DSAG, Computer Science</p>
+        </div>
+    
+        <!-- Rating Section -->
+        <div class="profile-section">
+            <h2>Rating</h2>
+            <p>⭐ 4.5 / 5</p>
+        </div>
+    
+        <!-- Feedback Section -->
+        <div class="profile-section feedback">
+            <h2>Quick Feedback</h2>
+            <blockquote>
+                "This student is great at collaborating in group projects and always delivers quality work."
+            </blockquote>
+            <p class="reviewer">ZHANG YU (2474597G)</p>
+        </div>
+      </div>
+
+      <div class="tab-content" id="content6">
+        <div class="booking-form">
+            <h2>Booking Form</h2>
+            <form id="bookingForm">
+                <!-- Venue Dropdown -->
+                <label for="venue">Venue:</label>
+                <select id="venue" name="venue" required>
+                    <option value="venue1">Venue 1</option>
+                    <option value="venue2">Venue 2</option>
+                    <option value="venue3">Venue 3</option>
+                </select>
+    
+                <!-- Date Picker -->
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <!-- Time Slot Dropdown (2-hour blocks) -->
+                <label for="time">Time Slot:</label>
+                <select id="time" name="time" required>
+                    <option value="09:00-11:00">09:00 - 11:00</option>
+                    <option value="11:00-13:00">11:00 - 13:00</option>
+                    <option value="13:00-15:00">13:00 - 15:00</option>
+                    <option value="15:00-17:00">15:00 - 17:00</option>
+                </select>
+    
+                 <div id="booking-dropdwon">
+                  <label>Booking Type:</label>
+                  <select name="Booking Type" id="bookingType" required>
+                    <option value="Individual"> Individual</option>
+                    <option value="Group"> Group</option>
+                </select>
+                </div>
+                
+                <div id="groupMembersSection">
+                    <h3>Group Members (fill out only if group booking)</h3>
+                    <table id="groupMembersTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Admin Number</th>
+                            <th>Class</th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name1" placeholder="DANIELLA HAN XUE EN"></td>
+                            <td><input type="text" name="admin1" placeholder="2404908B"></td>
+                            <td><input type="text" name="class1" placeholder="C24B02"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name2" placeholder="SY JILIAN ELISHA VELARDE"></td>
+                            <td><input type="text" name="admin2" placeholder="2402574D"></td>
+                            <td><input type="text" name="class2" placeholder="C24B02"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name3" placeholder="ASIFF YUSRA MUFEEDA"></td>
+                            <td><input type="text" name="admin3" placeholder="2403987G"></td>
+                            <td><input type="text" name="class3" placeholder="C24B02" ></td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" name="name4" placeholder="KAREN CHAN XINYI"></td>
+                            <td><input type="text" name="admin4" placeholder="2403187D"></td>
+                            <td><input type="text" name="class4" placeholder="C24B02" ></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <br>
+    
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Popup Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="popup-close" id="popupClose">&times;</span>
+            <p>Thank you for submitting your booking. You will be sent an email to your school email if the booking is successful.</p>
+        </div>
+    </div>
+    
+    
+    
+    </div>
+    
+      
+    </main>
+  </div>
+
+  <div class="footer">
+    <div class="footer-container">
+      <p>&copy; 2025. Daniella Han. All Rights Reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

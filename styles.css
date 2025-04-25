@@ -1,0 +1,505 @@
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw; /* Ensures full viewport width */
+  margin: 0; /* Removes any default margin */
+  padding: 0; /* Removes any default padding */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+  justify-content: center; /* Centers the entire search bar horizontally */
+}
+
+.search-bar input[type="text"] {
+  font-size: 15px;
+  padding: 5px 10px; 
+  border: 1px solid #ccc;
+  border-right: none; /* Removes the border overlap */
+  border-radius: 5px 0 0 5px;
+  width: 100%; 
+  outline: none; /* Removes the default focus outline */
+}
+
+.fa-solid.fa-magnifying-glass {
+  background-color: #ccc; /* Optional: Adds a background for the icon */
+  border: 1px solid #ccc; /* Matches the border of the input */
+  border-radius: 0 5px 5px 0; /* Rounds the right side */
+  padding: 5px; /* Adjusts the padding for better alignment */
+  display: flex;
+  align-items: center; /* Centers the icon vertically */
+  justify-content: center; /* Centers the icon horizontally */
+  cursor: pointer; /* Makes the icon look clickable */
+}
+
+
+/* General Layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+  
+
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #1d74b9;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+
+  
+  .sidebar .nav label {
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar .nav label:hover {
+    background-color: #1fbab2;
+  }
+
+
+  .stats-box {
+    padding: 15px;
+    background-color: #f9f9f9; /* Slightly off-white background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add spacing from elements above */
+    text-align: center; /* Center-align text if needed */
+}
+
+.stats-box h4 {
+    margin: 0;
+    color: #1d74b9; /* Keep the color consistent */
+}
+
+.stats{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.stats p{
+  margin: 0;
+  color: #1d74b9;
+}
+
+.pairings {
+  display: flex;
+  flex-direction: column;
+}
+
+.pairing-item {
+  display: flex;
+  justify-content: space-between; /* Pushes the button to the right */
+  width: 100%;
+}
+
+
+
+.unpair-button {
+  background-color: red; 
+  color: white;          
+  border: none;
+  margin-left: 20px;       
+  padding: 5px 10px;    
+  font-size: 14px;       
+  border-radius: 5px;    
+  cursor: pointer;       
+  transition: background-color 0.3s ease; 
+}
+
+
+.unpair-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+.message {
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.message h4 {
+    margin: 0 0 5px;
+    color: #1d74b9;
+}
+
+.message p {
+    margin: 0;
+}
+
+.message .timestamp {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.notifications {
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.notifications h4 {
+  margin: 0 0 5px;
+  color: #1d74b9;
+}
+
+.notifications p {
+  margin: 0;
+}
+
+.notifications .timestamp {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+  /* Content Area */
+  .content {
+    flex: 1;
+    width: 100vh;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-left: 2px solid #1d74b9;
+    box-sizing: border-box;
+  }
+  
+  /* Tabs Styling */
+  .sidebar-tab {
+    padding: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Tab Content Styling */
+  .tab-content {
+    display: none;
+  }
+  
+  #tab1:checked ~ #content1,
+  #tab2:checked ~ #content2,
+  #tab3:checked ~ #content3,
+  #tab4:checked ~ #content4, 
+  #tab5:checked ~ #content5,
+  #tab6:checked ~ #content6 {
+    display: block;
+  }
+  
+  .tab-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab-navigation {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    justify-content:space-evenly;
+
+  }
+
+  .tab-button {
+    background-color: #1d74b9;
+    border: none;
+    border-radius: 10px; /* Adjust the radius for desired roundness */
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3)
+  }
+
+  .form-row {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    margin-bottom: 1em;
+  }
+
+  .form-row label {
+    margin-right: 1px; /* Adds space between label and input */
+    width: 120px; /* Adjust width for consistency */
+
+  }
+
+  textarea {
+    resize: none; 
+  }
+  .feedback-container input[type="radio"] {
+    display: inline-block; /* Ensures the radio button is visible */
+    margin-left: 5px; 
+  }
+  #email {
+    width: 250px; /* Adjust width as needed */
+    height: 20px; /* Adjust height as needed */
+    font-size: 14px; /* Optional: Adjust text size for better readability */
+    padding: 5px;    /* Optional: Add padding for spacing inside the box */
+  }  
+
+/* Profile Page (content5) */
+#content5 {
+  padding: 20px;
+}
+
+.profile-info {
+flex-grow: 1;
+margin-left: 15px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative; /* To manage the position of the compatibility block */
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 50%;
+  border: 3px solid #1d74b9;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* To ensure the image fills the container */
+}
+
+
+.edit-profile {
+  background-color: #1d74b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.edit-profile:hover {
+  background-color: #145a87;
+}
+
+.compatibility {
+  background-color: #84bd95; 
+  margin-right: 15px;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1em; 
+  margin-left: 15px; /* Space between the profile info and compatibility */
+  text-align: center; /* Centers the text inside the compatibility block */
+}
+
+
+.tab-content {
+  max-width: 100%;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.profile-stats h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.profile-stats .stats p {
+  margin: 5px 0;
+}
+
+.profile-section {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  table-layout:fixed;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 1px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+td {
+  padding: 1px;
+  border: 1px solid #ddd;
+  text-align: center;
+  word-break: break-word; /* Prevent long words from overlapping */
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.feedback blockquote {
+  font-style: italic;
+  margin: 0 0 10px;
+}
+
+.feedback .reviewer {
+  text-align: left;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Booking Page (content6) */
+#content6 {
+  padding: 20px;
+}
+
+.booking-form h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.booking-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.booking-form select, .booking-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Checkbox visibility - Ensure the checkbox is visible */
+input[type="checkbox"] {
+  display: inline-block;
+  margin-right: 10px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+}
+
+.booking-form table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.booking-form table, .booking-form th, .booking-form td {
+  border: 1px solid #ccc;
+}
+
+.booking-form th, .booking-form td {
+  padding: 10px;
+  text-align: left;
+}
+
+.booking-form input[type="text"] {
+  width: 95%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.booking-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #1d74b9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.submit-button:hover {
+  background-color: #145a87;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.popup-close {
+  font-size: 24px;
+  cursor: pointer;
+  color: #1d74b9;
+}
+
+.popup-close:hover {
+  color: #145a87;
+}
+
+.footer{
+  display: show;
+  color :#145a87;
+}
+
+
